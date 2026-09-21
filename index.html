@@ -137,6 +137,12 @@
       border-color: var(--red) !important;
       box-shadow: 0 8px 20px rgba(235,10,30,0.3);
     }
+    .tag-sheet {
+      background: #107C41 !important;
+      color: #fff !important;
+      border-color: #107C41 !important;
+      box-shadow: 0 8px 20px rgba(16,124,65,0.3);
+    }
     .cover-foot {
       display: flex;
       justify-content: space-between;
@@ -463,7 +469,7 @@
       color: #fff;
       padding: 24px 32px;
       border-radius: 24px;
-      margin: 32px 0;
+      margin: 24px 0;
       box-shadow: 0 15px 35px rgba(16,124,65,.22);
       transition: all .3s cubic-bezier(0.16, 1, 0.3, 1);
       text-decoration: none;
@@ -643,6 +649,8 @@
         <div class="tag">05 Vùng nhu cầu chiến lược</div>
         <div class="tag">AI Search & Google Overview</div>
         <div class="tag tag-primary">Mức đầu tư: 35 Triệu / Tháng (8 Tháng)</div>
+        <a href="https://docs.google.com/spreadsheets/d/1mbSt1gZ5Db0rstTU2LJRedEUAv2aEagO/edit?gid=391867238#gid=391867238" target="_blank" rel="noopener noreferrer" class="tag tag-sheet">📊 Google Sheet: SERP MAP</a>
+        <a href="https://docs.google.com/spreadsheets/d/1WeVTQrhZS0CGG9VPHV_MR6_-CAUcY6t1/edit?gid=1303782750#gid=1303782750" target="_blank" rel="noopener noreferrer" class="tag tag-sheet">📊 Google Sheet: COMPETITOR GAP</a>
       </div>
     </div>
     <div class="cover-foot">
@@ -714,18 +722,35 @@
       </div>
     </div>
 
-    <a href="SERP_Map_TFSVN_Battlefield_AI_Search_Updated.xlsx" class="btn-data-box">
+    <!-- Live Data Buttons -->
+    <a href="https://docs.google.com/spreadsheets/d/1mbSt1gZ5Db0rstTU2LJRedEUAv2aEagO/edit?gid=391867238#gid=391867238" target="_blank" rel="noopener noreferrer" class="btn-data-box">
       <div class="btn-data-info">
         <div class="btn-data-icon">
           <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
         </div>
         <div class="btn-data-text">
-          <h4>Bản Đồ SERP Map & Competitor X-Ray (TFSVN Clean Dataset)</h4>
-          <p>Xem dữ liệu chi tiết đối thủ VIB, VPBank, TPBank và tín hiệu AI Search Layer</p>
+          <h4>Google Sheet 1: SERP MAP & AI Search Battlefield</h4>
+          <p>Xem dữ liệu SERP Map 7/7 AI Overview và các đối thủ trực tiếp trên Google Search</p>
         </div>
       </div>
       <div class="btn-data-action">
-        <span>Xem Phân Tích Excel</span>
+        <span>Mở Google Sheet SERP Map</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+      </div>
+    </a>
+
+    <a href="https://docs.google.com/spreadsheets/d/1WeVTQrhZS0CGG9VPHV_MR6_-CAUcY6t1/edit?gid=1303782750#gid=1303782750" target="_blank" rel="noopener noreferrer" class="btn-data-box" style="background: linear-gradient(135deg, #1B2952 0%, #0F1836 100%); border: 1px solid rgba(255,255,255,0.1);">
+      <div class="btn-data-info">
+        <div class="btn-data-icon" style="background: rgba(235,10,30,0.2);">
+          <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
+        </div>
+        <div class="btn-data-text">
+          <h4>Google Sheet 2: COMPETITOR GAP (Khoảng trống đối thủ)</h4>
+          <p>Xem dữ liệu chi tiết các mảng VIB, VPBank, TPBank đang lấn lướt và đề xuất hành động cho TFSVN</p>
+        </div>
+      </div>
+      <div class="btn-data-action" style="color: var(--navy);">
+        <span>Mở Google Sheet Competitor GAP</span>
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
       </div>
     </a>
@@ -788,46 +813,78 @@
 <section class="layer-section bg-dark">
   <div class="shell">
     <section class="section-head">
-      <div class="kicker">03 · PHÂN TÍCH ĐỐI THỦ</div>
-      <h2>3. Đối thủ đang chiếm lĩnh thị trường như thế nào?</h2>
+      <div class="kicker">03 · PHÂN TÍCH ĐỐI THỦ CHUYÊN SÂU (COMPETITOR GAP)</div>
+      <h2>3. Đối thủ đang chiếm lĩnh các khoảng trống thị trường như thế nào?</h2>
     </section>
-    <p>Dựa trên dữ liệu <strong>Competitor X-Ray đã được làm sạch (Clean Dataset)</strong>, các ngân hàng thương mại đang chia nhau đánh chiếm từng phân khúc khách hàng:</p>
+    <p>Rà soát chi tiết từ dữ liệu Google Sheet <strong>Competitor GAP (`TFSVN_Khoang_trong_doi_thu.xlsm`)</strong> cho thấy các ngân hàng thương mại đang chia nhau chiếm giữ những cụm câu hỏi nhu cầu then chốt mà TFSVN đang bỏ ngỏ hoặc chưa tối ưu bài riêng:</p>
 
     <div class="table-scroll">
       <table>
         <thead>
           <tr>
-            <th>Đối thủ</th>
-            <th>Cách họ triển khai</th>
-            <th>Họ lấy cơ hội ở đâu</th>
-            <th>Bài học cho TFSVN</th>
+            <th>Cụm nhu cầu</th>
+            <th>Đối thủ đang thắng</th>
+            <th>Search Volume & Thứ hạng đối thủ</th>
+            <th>Hiện trạng TFSVN</th>
+            <th>Đề xuất tinh chỉnh cho TFSVN</th>
           </tr>
         </thead>
         <tbody>
           <tr>
+            <td><strong>Nợ xấu có vay được không</strong></td>
+            <td><strong>VIB, VPBank</strong></td>
+            <td>VIB (#1, Volume 165/tháng), VPBank (#3, Volume 4/tháng)</td>
+            <td>Chỉ có 1 bài chung (`6-luu-y-can-biet...`), trang mạnh nhất ~0 traffic.</td>
+            <td>Tách thành bài riêng: Giải thích rõ quy trình phân loại nợ xấu (Nhóm 1-5) và cơ chế xem xét hỗ trợ chính thức của TFSVN.</td>
+          </tr>
+          <tr>
+            <td><strong>Giấy tờ / Cavet gốc / Bằng lái</strong></td>
+            <td><strong>VIB, VPBank</strong></td>
+            <td>VIB (#1, Volume 24/tháng), VPBank (#2, Volume 9/tháng)</td>
+            <td><strong>Chưa có trang riêng</strong> giải quyết thắc mắc cavet gốc.</td>
+            <td>Tạo bài riêng: Giải thích giấy tờ nào TFSVN giữ, lấy cavet gốc ở đâu, có cần bằng lái khi mua trả góp không.</td>
+          </tr>
+          <tr>
+            <td><strong>Thế chấp ô tô</strong></td>
+            <td><strong>VPBank, VIB, TPBank</strong></td>
+            <td>VPBank (#1, Volume 177), VIB (#2, Volume 39), TPBank (#3, Volume 24)</td>
+            <td>Chỉ có 1 bài tổng hợp (`cac-hinh-thuc-vay...`), traffic ~5/tháng.</td>
+            <td>Tạo trang chuyên sâu về Vay thế chấp ô tô chính hãng: Thủ tục, đăng ký giao dịch bảo đảm & quy trình xóa thế chấp.</td>
+          </tr>
+          <tr>
+            <td><strong>Tính tiền trả góp & Tool</strong></td>
+            <td><strong>VIB, TPBank, VPBank</strong></td>
+            <td>VIB (#1, Volume 140/tháng), TPBank (có Calculator chuẩn)</td>
+            <td>Có 2 bài viết nhưng trang mạnh nhất chỉ nhận ~3 traffic/tháng.</td>
+            <td>Nâng cấp bài hướng dẫn thành trang Interactive Calculator: Tính thử số tiền trả trước 20-40% & trả hàng tháng theo xe Toyota.</td>
+          </tr>
+          <tr>
+            <td><strong>Số tiền cần trả trước (0%, 10%, 20%, 30%)</strong></td>
+            <td><strong>VPBank, VIB, TPBank</strong></td>
+            <td>VPBank (#1, Volume 1,414/tháng), VIB (Volume 145), TPBank (Volume 92)</td>
+            <td>Chỉ có bài riêng cho xe Fortuner, nhận ~32 traffic/tháng.</td>
+            <td>Xây dựng bài viết tổng quát cho các mốc trả trước (20%, 30%, 40%) áp dụng cho toàn bộ các mẫu xe Vios, Cross, Veloz...</td>
+          </tr>
+          <tr>
+            <td><strong>Lãi suất vay mua xe</strong></td>
+            <td><strong>VPBank, VIB, TPBank</strong></td>
+            <td>VPBank (#1, Volume 489/tháng), VIB (#2, Volume 207/tháng)</td>
+            <td>Bị <strong>ăn thịt từ khóa (Cannibalization)</strong> với 18 bài viết phân tán, bài mạnh nhất chỉ ~80 traffic.</td>
+            <td>Gom trùng lặp 18 bài cũ, xây 1 trang Pillar chính thức về Lãi suất TFSVN (lãi cố định vs thả nổi, minh bạch cách tính).</td>
+          </tr>
+          <tr>
+            <td><strong>Xe ngân hàng thanh lý</strong></td>
             <td><strong>VIB</strong></td>
-            <td>Phủ cực rộng các bài cẩm nang, kinh nghiệm vay, hồ sơ, xe cũ, trả góp (Đứng #1 từ khóa cách tính vay trả góp).</td>
-            <td>Gặp khách hàng rất sớm từ giai đoạn họ mới tìm hiểu xem có đủ điều kiện vay hay không.</td>
-            <td>TFSVN không cần viết rộng như VIB; cần chọn đúng các câu hỏi gắn trực tiếp với quyết định mua xe Toyota.</td>
-          </tr>
-          <tr>
-            <td><strong>VPBank</strong></td>
-            <td>Kết hợp chặt chẽ Landing page sản phẩm + Công cụ tính khoản vay + Bài thông tin lãi suất (#3).</td>
-            <td>Đưa ngay người dùng từ bài đọc sang công cụ tính số tiền trả hàng tháng và Form đăng ký.</td>
-            <td>TFSVN cần gắn công cụ Toyota Calculator vào ngay trong bài đọc giải đáp thắc mắc.</td>
-          </tr>
-          <tr>
-            <td><strong>TPBank / Shinhan</strong></td>
-            <td>Bố cục thông tin gói vay minh bạch, rõ ràng, dễ hình dung về hạn mức và thủ tục.</td>
-            <td>Giảm sự mơ hồ cho người mua xe lần đầu ở khâu chuẩn bị hồ sơ.</td>
-            <td>TFSVN nên trình bày điều kiện vay và quy trình giải ngân qua đại lý Toyota một cách đơn giản nhất.</td>
+            <td>VIB (#1, Volume 37/tháng với bài cẩm nang xe thanh lý)</td>
+            <td><strong>Chưa có trang riêng</strong> trên website TFSVN.</td>
+            <td>Tạo bài viết góc nhìn chính hãng: Lợi ích, rủi ro, quy trình mua xe thanh lý và lưu ý pháp lý.</td>
           </tr>
         </tbody>
       </table>
     </div>
 
     <blockquote class="quote-card">
-      <strong>Khác biệt độc quyền của TFSVN:</strong> Đối thủ nói câu chuyện vay ngân hàng chung chung. TFSVN có quyền nói câu chuyện tài chính <strong>Toyota chính hãng:</strong> Xe Vios trả trước bao nhiêu, Veloz trả bao nhiêu, gói Ballon thế nào, duyệt tại đại lý ra sao!
+      <strong>Kết luận từ Competitor GAP Audit:</strong> Ngân hàng thương mại (VIB, VPBank) đang thắng nhờ <strong>xây trang đúng ngách nhu cầu câu hỏi</strong>. TFSVN không thiếu nội dung, nhưng bị phân tán bài viết hoặc thiếu bài giải quyết thắc mắc riêng biệt. Tinh chỉnh bằng cách xây dựng **05 Vùng nhu cầu chuẩn ngách** sẽ giúp TFSVN lấy lại các vị trí Top 1-3 này.
     </blockquote>
   </div>
 </section>
@@ -873,27 +930,27 @@
     <div class="bento-grid">
       <div class="bento-card success">
         <h4>Vùng 1 — Khả năng vay</h4>
-        <p><strong>Nhu cầu:</strong> Vay không chứng minh thu nhập; nợ xấu có mua trả góp xe được không...</p>
-        <p><strong>Lý do đánh:</strong> Gần với lo lắng điều kiện thực tế của khách hàng.</p>
+        <p><strong>Nhu cầu:</strong> Vay không chứng minh thu nhập; nợ xấu nhóm 1-5 có mua trả góp xe được không...</p>
+        <p><strong>Lý do đánh:</strong> Gần với lo lắng điều kiện thực tế của khách hàng (Lấn lướt khoảng trống VIB đang giữ).</p>
         <p><strong>Tài sản xây:</strong> Bài giải đáp tình huống + FAQ thủ tục TFSVN.</p>
       </div>
       <div class="bento-card success">
         <h4>Vùng 2 — Khả năng chi trả</h4>
-        <p><strong>Nhu cầu:</strong> Thu nhập 20/30 triệu mua xe gì; trả trước 20-30% bao nhiêu tiền...</p>
-        <p><strong>Lý do đánh:</strong> Khách đang ở ngay sát quyết định mua xe.</p>
+        <p><strong>Nhu cầu:</strong> Thu nhập 20/30 triệu mua xe gì; trả trước 20-30-40% bao nhiêu tiền...</p>
+        <p><strong>Lý do đánh:</strong> Khách đang ở ngay sát quyết định mua xe (Cạnh tranh trực tiếp cụm 1,414 volume của VPBank).</p>
         <p><strong>Tài sản xây:</strong> Bài toán tình huống thu nhập + Tool tính khoản vay.</p>
       </div>
       <div class="bento-card success">
         <h4>Vùng 3 — So sánh phương án</h4>
         <p><strong>Nhu cầu:</strong> Vay TFSVN hay ngân hàng; tiêu chí chọn gói vay mua ô tô...</p>
         <p><strong>Lý do đánh:</strong> Khách hàng đang trong giai đoạn lựa chọn đơn vị tài chính.</p>
-        <p><strong>Tài sản xây:</strong> Bài so sánh trung lập, phân tích lợi thế lãi suất & gói Ballon.</p>
+        <p><strong>Tài sản xây:</strong> Bài so sánh trung lập, phân tích lợi thế lãi suất & gói Ballon chính hãng.</p>
       </div>
       <div class="bento-card success">
         <h4>Vùng 4 — Thủ tục thực tế</h4>
-        <p><strong>Nhu cầu:</strong> Quy trình giải ngân, cavet xe, thủ tục tại đại lý Toyota...</p>
-        <p><strong>Lý do đánh:</strong> Giải tỏa tâm lý lo lắng trước khi người vay đặt bút ký.</p>
-        <p><strong>Tài sản xây:</strong> Checklist hướng dẫn chi tiết từng bước.</p>
+        <p><strong>Nhu cầu:</strong> Quy trình giải ngân, cavet gốc ở đâu, thế chấp ô tô, thủ tục tại đại lý Toyota...</p>
+        <p><strong>Lý do đánh:</strong> Lấp đầy khoảng trống thiếu trang riêng (Cavet & Thế chấp) mà VIB/VPBank đang khai thác.</p>
+        <p><strong>Tài sản xây:</strong> Checklist hướng dẫn chi tiết từng bước + Quy trình duyệt nhanh tại Showroom.</p>
       </div>
       <div class="bento-card success">
         <h4>Vùng 5 — Theo mẫu xe Toyota</h4>
@@ -904,7 +961,7 @@
       <div class="bento-card success">
         <h4>Vùng 6 — Lớp AI Search</h4>
         <p><strong>Nhu cầu:</strong> Các câu hỏi AI tìm kiếm dài, nhiều điều kiện so sánh...</p>
-        <p><strong>Lý do đánh:</strong> Đón đầu xu hướng tìm kiếm mới của Google AI Overview.</p>
+        <p><strong>Lý do đánh:</strong> Đón đầu xu hướng tìm kiếm mới của Google AI Overview (Đã rà soát 7/7 AI Overview).</p>
         <p><strong>Tài sản xây:</strong> Nội dung chuẩn hóa Schema, câu trả lời trực diện dễ trích dẫn.</p>
       </div>
     </div>
@@ -923,7 +980,7 @@
     <div class="bento-grid">
       <div class="bento-card">
         <h3>1. Phân tích dữ liệu thực tế</h3>
-        <p>Đã làm sạch hàng trăm URL trùng lặp của đối thủ để có bức tranh so sánh chính xác nhất, không kết luận dựa trên dữ liệu thô.</p>
+        <p>Đã làm sạch hàng trăm URL trùng lặp của đối thủ trong file Competitor GAP để có bức tranh so sánh chính xác nhất, không kết luận dựa trên dữ liệu thô.</p>
       </div>
       <div class="bento-card">
         <h3>2. Audit sâu bộ 20 từ khóa</h3>
